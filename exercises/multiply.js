@@ -11,14 +11,23 @@
 // Your code :
 function multiply(assert, num)
 {
-	let i = assert;
 	let total = 0;
-	while(i >= 0)
+	if (num < 0 && assert > 0)
 	{
-		total += num;
-	}
+		num = -num;
+		assert = -assert;
+	};
+	if (num < 0 && assert < 0) {
+		num = -num;
+		assert = -assert;
+	};
+	while (num > 0)
+	{
+		total += assert;
+		num = num - 1;
+	};
 	return(total);
-}
+};
 //* Begin of tests
 const assert = require('assert')
 
