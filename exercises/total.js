@@ -5,7 +5,15 @@
  * and return the total
  *
  */
-
+function total(assert)
+{
+	let compte = 0;
+	for(let i = 0; i < assert.length; i++)
+	{
+		compte = compte + assert[i];
+	}
+	return(compte);
+}
 
 //* Begin of tests
 const assert = require('assert')
