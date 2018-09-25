@@ -9,8 +9,15 @@
  * @notions Primitive and Operators, Functions, Recursion
  */
 
-// Your code :
-
+  function multiply(x , y){
+    let t = x;
+    if (y === 0 || x === 0)
+      return (0);
+    else if(y > 0)
+      return (t + multiply(x, y - 1));
+    else if(y < 0)
+      return (-multiply(x, -y));
+  }
 //* Begin of tests
 const assert = require('assert')
 
